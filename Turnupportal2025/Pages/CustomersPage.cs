@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Turnupportal2025.Pages
 {
-    internal class CustomersPage
+    public class CustomersPage
     {
     }
 }
