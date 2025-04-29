@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Turnupportal2025.Utilities;
 
 namespace Turnupportal2025.Pages
 {
@@ -26,6 +27,8 @@ namespace Turnupportal2025.Pages
             //Navigate to Time and Material Page
             IWebElement administrationTab = driver.FindElement(By.XPath("/html/body/div[3]/div/div/ul/li[5]/a/span"));
             administrationTab.Click();
+
+            Wait.WaitToBeClickable(driver, "XPath", "/html/body/div[3]/div/div/ul/li[5]/ul/li[6]/a", 10);
 
             IWebElement companiesOption = driver.FindElement(By.XPath("/html/body/div[3]/div/div/ul/li[5]/ul/li[6]/a"));
             companiesOption.Click();

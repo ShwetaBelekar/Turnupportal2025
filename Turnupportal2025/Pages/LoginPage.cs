@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Turnupportal2025.Utilities;
 
 namespace Turnupportal2025.Pages
 {
@@ -18,6 +19,8 @@ namespace Turnupportal2025.Pages
 
             IWebElement usernameTextbox = driver.FindElement(By.Id("UserName"));
             usernameTextbox.SendKeys("hari");
+
+            Wait.WaitToBeVisible(driver, "Id", "Password", 7);
 
             IWebElement passwordTextbox = driver.FindElement(By.Id("Password"));
             passwordTextbox.SendKeys("123123");

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Turnupportal2025.Utilities;
 
 namespace Turnupportal2025.Pages
 {
@@ -44,6 +45,8 @@ namespace Turnupportal2025.Pages
 
             IWebElement icOption = driver.FindElement(By.XPath("//*[@id=\"groupList_listbox\"]/li[73]"));
             icOption.Click();
+
+            Wait.WaitToBeClickable(driver, "Id", "SaveButton", 3);
 
             IWebElement saveButton = driver.FindElement(By.Id("SaveButton"));
             saveButton.Click();
